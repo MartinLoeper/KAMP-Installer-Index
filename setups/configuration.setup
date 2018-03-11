@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Configuration
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0">
+  <installation
+      name="kamp.development.installation"
+      label="KAMP Development Installation">
+    <productVersion
+        href="index:/org.eclipse.setup#//@productCatalogs[name='sdq']/@products[name='epp.package.modeling']/@versions[name='oxygen']"/>
+    <description>KAMP Development installation for developers</description>
+  </installation>
+  <workspace
+      name="kamp.development.workspace"
+      label="KAMP Development Workspace">
+    <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='kamp.source.projects']/@projects[name='Monorepo']/@streams[name='master']"/>
+    <description>KAMP Development workspace for development</description>
+  </workspace>
+</setup:Configuration>
