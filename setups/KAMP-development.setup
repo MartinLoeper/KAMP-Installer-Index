@@ -3,8 +3,10 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore"
     name="kamp.development"
     label="KAMP Development">
   <annotation
@@ -32,8 +34,21 @@
           name="org.eclipse.rcp.feature.group"/>
       <repository
           url="http://download.eclipse.org/releases/oxygen"/>
+      <repository
+          url="https://martinloeper.github.io/updatesite/nightly"/>
+    </setupTask>
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        location="${workspace.location/.git/}"
+        remoteName="kamp-official"
+        remoteURI="https://github.com/MartinLoeper/KAMP-2.0.git"
+        pushURI=""
+        checkoutBranch="master"
+        recursive="true"
+        restrictToCheckoutBranch="true">
+      <description>Clones the official KAMP repository</description>
     </setupTask>
     <description>KAMP Development for Oxygen.</description>
   </version>
-  <description>KAMP Development is the development installation for KAMP</description>
+  <description>KAMP Development is the development bundle for KAMP. Use this product if you want to extend the framework.</description>
 </setup:Product>
