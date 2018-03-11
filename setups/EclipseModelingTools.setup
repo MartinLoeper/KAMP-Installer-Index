@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product name="epp.package.modeling"
-      label="Eclipse Modeling Tools">
+<setup:Product
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    name="epp.package.modeling"
+    label="Eclipse Modeling Tools">
     <annotation
         source="http://www.eclipse.org/oomph/setup/BrandingInfo">
       <detail
@@ -632,4 +638,4 @@
               You can use it to graphically design domain models, to leverage those models at design time by creating and editing dynamic instances, to collaborate via Eclipse's team support with facilities for comparing and merging models and model instances structurally, and finally to generate Java code from those models to produce complete applications.
               In addition, via the package's discover catalog, you can easily install a wide range of additional powerful, model-based tools and runtimes to suit your specific needs.
     </description>
-  </product>
+  </setup:Products>
