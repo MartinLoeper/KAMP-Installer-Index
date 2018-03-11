@@ -37,6 +37,5 @@
       href="http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/WorkingSets.ecore#/"/>
   <productCatalog
       href="SDQ.setup#/"/>
-  <!-- <projectCatalog
-      href="my.projects.setup#/"/> -->
+  <projectCatalog href="projects.setup#/" />
 </setup:Index>
