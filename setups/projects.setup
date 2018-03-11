@@ -249,20 +249,17 @@
   </setupTask>
   <setupTask
       xsi:type="setup:InstallationTask"/>
-  <setupTask
-      xsi:type="git:GitCloneTask"
-      id="git.clone.kamp"
-      location="${workspace.location/.git/}"
-      remoteName="kamp-official"
-      remoteURI="https://github.com/MartinLoeper/KAMP-2.0.git"
-      pushURI=""
-      checkoutBranch="master"
-      recursive="true"
-      restrictToCheckoutBranch="true">
-    <description>Clones the official KAMP repository</description>
-  </setupTask>
-  <project name="Test"
-      label="">
+  <project name="Monorepo"
+      label="Monorepo">
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.kamp"
+        remoteName=""
+        remoteURI="https://github.com/MartinLoeper/KAMP-2.0.git"
+        pushURI=""
+        checkoutBranch="master">
+      <description>Clones the official KAMP repository</description>
+    </setupTask>
     <stream
         name="master"
         label="Master">
