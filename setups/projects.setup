@@ -3,13 +3,13 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
+    xmlns:launching="http://www.eclipse.org/oomph/setup/launching/1.0"
     xmlns:pde="http://www.eclipse.org/oomph/setup/pde/1.0"
     xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:setup.targlets="http://www.eclipse.org/oomph/setup/targlets/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/pde/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/PDE.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/launching/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Launching.ecore http://www.eclipse.org/oomph/setup/pde/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/PDE.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore"
     name="kamp.source.projects"
     label="KAMP Source Projects">
   <annotation
@@ -254,20 +254,6 @@
   <project name="Monorepo"
       label="Monorepo">
     <setupTask
-        xsi:type="git:GitCloneTask"
-        id="git.clone.kamp"
-        remoteURI="https://github.com/MartinLoeper/KAMP-2.0.git"
-        pushURI="git@github.com:MartinLoeper/KAMP-2.0.git"
-        checkoutBranch="master">
-      <description>Clones the official KAMP repository</description>
-    </setupTask>
-    <setupTask
-        xsi:type="projects:ProjectsImportTask">
-      <sourceLocator
-          rootFolder="${git.clone.kamp.location}"
-          locateNestedProjects="true"/>
-    </setupTask>
-    <setupTask
         xsi:type="setup.p2:P2Task"
         label="Download KAMP Dependencies">
       <requirement
@@ -295,11 +281,23 @@
           name="org.palladiosimulator.simucom.feature.feature.group"/>
       <requirement
           name="org.palladiosimulator.solver.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.xtext.sdk.feature.group"/>
+      <requirement
+          name="org.eclipse.xtend.sdk.feature.group"/>
       <repository
           url="http://vitruv.tools/updatesite/nightly"/>
       <repository
           url="https://sdqweb.ipd.kit.edu/eclipse/palladiosimulator/nightly/"/>
+      <repository
+          url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
       <description></description>
+    </setupTask>
+    <setupTask
+        xsi:type="projects:ProjectsImportTask">
+      <sourceLocator
+          rootFolder="${git.clone.kamp.location}"
+          locateNestedProjects="true"/>
     </setupTask>
     <setupTask
         xsi:type="setup:ResourceCreationTask"
@@ -319,6 +317,18 @@
         xsi:type="setup:EclipseIniTask"
         option="-pluginCustomization"
         value="${plugin.customization.ini.targetURL|file}"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.debug.ui/org.eclipse.debug.ui.cancel_launch_with_compile_errors"
+        value="always"/>
+    <setupTask
+        xsi:type="projects:ProjectsBuildTask"/>
+    <setupTask
+        xsi:type="launching:LaunchTask"
+        id="GenerateKampLanguage"
+        launcher="Generate Language Infrastructure (edu.kit.ipd.sdq.kamp.ruledsl)">
+      <description>Runs the MWE2 Workflow for xText and xTend generation</description>
+    </setupTask>
     <stream
         name="master"
         label="Master">
