@@ -358,7 +358,7 @@
             xsi:type="predicates:NotPredicate">
           <operand
               xsi:type="workingsets:InclusionPredicate"
-              includedWorkingSet="//@projects[name='Monorepo']/@setupTasks.9/@workingSets.1 //@projects[name='Monorepo']/@setupTasks.9/@workingSets.2"/>
+              includedWorkingSet="//@projects[name='Monorepo']/@setupTasks.9/@workingSets.1"/>
         </predicate>
       </workingSet>
       <workingSet
@@ -373,12 +373,6 @@
               xsi:type="predicates:NamePredicate"
               pattern="edu\.kit\.ipd\.sdq\.kamp\.model\..*"/>
         </predicate>
-      </workingSet>
-      <workingSet
-          name="KAMP Extensions">
-        <predicate
-            xsi:type="workingsets:InclusionPredicate"
-            includedWorkingSet="//@projects[name='Monorepo']/@setupTasks.9/@workingSets.6 //@projects[name='Monorepo']/@setupTasks.9/@workingSets.4 //@projects[name='Monorepo']/@setupTasks.9/@workingSets.3 //@projects[name='Monorepo']/@setupTasks.9/@workingSets.5"/>
       </workingSet>
       <workingSet
           name="KAMP4IS">
