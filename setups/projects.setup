@@ -353,14 +353,20 @@
           name="KAMP Core"
           id="">
         <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern="${git.clone.kamp.location|path}/KAMP-2.0/bundles/framework/.*"/>
+            xsi:type="predicates:OrPredicate">
+          <operand
+              xsi:type="predicates:NamePredicate"
+              pattern="edu\.kit\.ipd\.sdq\.kamp"/>
+          <operand
+              xsi:type="predicates:NamePredicate"
+              pattern="edu\.kit\.ipd\.sdq\.kamp\.model\..*"/>
+        </predicate>
       </workingSet>
       <workingSet
           name="KAMP Extensions">
         <predicate
             xsi:type="predicates:LocationPredicate"
-            pattern="${git.clone.kamp.location|path}/KAMP-2.0/bundles/extensions/.*"/>
+            pattern=".*extensions.*"/>
       </workingSet>
     </setupTask>
     <setupTask
