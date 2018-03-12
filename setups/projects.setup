@@ -489,5 +489,33 @@
         label="Master"/>
     <description>The customized KAMP installer</description>
   </project>
+  <project name="Updatesite">
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.kamp.updatesite"
+        remoteURI="https://github.com/MartinLoeper/updatesite.git"
+        pushURI="git@github.com:MartinLoeper/updatesite.git"
+        checkoutBranch="master">
+      <description>Clone the KAMP Eclipse updatesite (p2)</description>
+    </setupTask>
+    <setupTask
+        xsi:type="projects:ProjectsImportTask">
+      <sourceLocator
+          rootFolder="${git.clone.kamp.updatesite.location}"
+          locateNestedProjects="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup.workingsets:WorkingSetTask">
+      <workingSet
+          name="KAMP Updatesite">
+        <predicate
+            xsi:type="predicates:LocationPredicate"
+            pattern="${git.clone.kamp.updatesite.location}"/>
+      </workingSet>
+    </setupTask>
+    <stream
+        name="master"
+        label="Master"/>
+  </project>
   <description>The KAMP source projects from the official Github repository.</description>
 </setup:ProjectCatalog>

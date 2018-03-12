@@ -15,8 +15,8 @@
       label="KAMP Development Workspace">
     <stream
         href="index:/org.eclipse.setup#//@projectCatalogs[name='kamp.source.projects']/@projects[name='Monorepo']/@streams[name='master']"/>
-    <stream
-        href="index:/org.eclipse.setup#//@projectCatalogs[name='kamp.source.projects']/@projects[name='installer']/@streams[name='master']"/>
-    <description>KAMP Development workspace for development</description>
+    <!-- <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='kamp.source.projects']/@projects[name='installer']/@streams[name='master']"/> -->
+    <description>KAMP Development workspace</description>
   </workspace>
 </setup:Configuration>
