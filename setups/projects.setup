@@ -383,25 +383,25 @@
       <workingSet
           name="KAMP4IS">
         <predicate
-            xsi:type="predicates:NamePredicate"
+            xsi:type="predicates:LocationPredicate"
             pattern=".*KAMP4IS.*"/>
       </workingSet>
       <workingSet
           name="KAMP4BP">
         <predicate
-            xsi:type="predicates:NamePredicate"
+            xsi:type="predicates:LocationPredicate"
             pattern=".*KAMP4BP.*"/>
       </workingSet>
       <workingSet
           name="KAMP4REQ">
         <predicate
-            xsi:type="predicates:NamePredicate"
+            xsi:type="predicates:LocationPredicate"
             pattern=".*KAMP4REQ.*"/>
       </workingSet>
       <workingSet
           name="KAMP-DSL">
         <predicate
-            xsi:type="predicates:NamePredicate"
+            xsi:type="predicates:LocationPredicate"
             pattern=".*KAMP-DSL.*"/>
       </workingSet>
     </setupTask>
