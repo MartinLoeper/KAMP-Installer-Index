@@ -383,26 +383,26 @@
       <workingSet
           name="KAMP4IS">
         <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern="\Q${git.clone.kamp.location}/bundles/extensions/KAMP4IS/\E.*"/>
+            xsi:type="predicates:NamePredicate"
+            pattern=".*KAMP4IS.*"/>
       </workingSet>
       <workingSet
           name="KAMP4BP">
         <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern="\Q${git.clone.kamp.location}/bundles/extensions/KAMP4BP/\E.*"/>
+            xsi:type="predicates:NamePredicate"
+            pattern=".*KAMP4BP.*"/>
       </workingSet>
       <workingSet
           name="KAMP4REQ">
         <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern="\Q${git.clone.kamp.location}/bundles/extensions/KAMP4REQ/\E.*"/>
+            xsi:type="predicates:NamePredicate"
+            pattern=".*KAMP4REQ.*"/>
       </workingSet>
       <workingSet
           name="KAMP-DSL">
         <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern="\Q${git.clone.kamp.location}/bundles/extensions/KAMP-DSL/\E.*"/>
+            xsi:type="predicates:NamePredicate"
+            pattern=".*KAMP-DSL.*"/>
       </workingSet>
     </setupTask>
     <setupTask
