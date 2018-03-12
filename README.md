@@ -11,4 +11,4 @@ In order to set up the Develpment KAMP bundle automatically, please do the follo
 
 The configuration file chooses the installer's correct options for you. You just have to follow the last few steps and start the installation.
 
-After the KAMP Eclipse distribution launched, wait a few minutes for the setup to finish. There are some post install hooks running inside the fresh Eclipse workspace. They are cloning the KAMP git, running the MWE2 workflow and finally do a build job.
+After the KAMP Eclipse distribution launched, wait a few minutes for the setup to finish. There are some post install hooks running inside the fresh Eclipse workspace. They are cloning the KAMP git, running the MWE2 workflow and finally execute a build job.
