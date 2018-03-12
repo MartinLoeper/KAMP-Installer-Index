@@ -379,6 +379,9 @@
         <predicate
             xsi:type="predicates:LocationPredicate"
             pattern=".*extensions.*"/>
+        <predicate
+            xsi:type="predicates:LocationPredicate"
+            pattern="\Q${git.clone.kamp.location}/bundles/extensions/\E.*"/>
       </workingSet>
     </setupTask>
     <setupTask
