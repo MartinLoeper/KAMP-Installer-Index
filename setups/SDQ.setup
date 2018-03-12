@@ -18,7 +18,7 @@
         url="${oomph.update.url}"/>
   </setupTask>
   <product href="KAMP.setup#/"/>
-  <product href="KAMP-development.setup#/"/>
+  <!-- <product href="KAMP-development.setup#/"/> -->
   <product href="EclipseModelingTools.setup#/"/>
   <description>Research by the Chair for Software Design and Quality @ KIT.</description>
 </setup:ProductCatalog>
