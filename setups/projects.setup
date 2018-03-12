@@ -386,5 +386,105 @@
       <description></description>
     </stream>
   </project>
+  <project name="installer"
+      label="Installer">
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.kamp.installer.windows64"
+        remoteURI="https://github.com/MartinLoeper/KAMP-Windows-Installer.git"
+        pushURI="git@github.com:MartinLoeper/KAMP-Windows-Installer.git"
+        checkoutBranch="master">
+      <description>Clone the windows 64bit installer repo</description>
+    </setupTask>
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.kamp.installer.index"
+        remoteURI="https://github.com/MartinLoeper/KAMP-Installer-Index.git"
+        pushURI="git@github.com:MartinLoeper/KAMP-Installer-Index.git"
+        checkoutBranch="master">
+      <description>Clone the oomph installer index repo</description>
+    </setupTask>
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.kamp.installer.linux32"
+        remoteURI="https://github.com/MartinLoeper/KAMP-Linux-32bit-Installer.git"
+        pushURI="git@github.com:MartinLoeper/KAMP-Linux-32bit-Installer.git"
+        checkoutBranch="master">
+      <description>Clone the linux 32bit installer repo</description>
+    </setupTask>
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.kamp.installer.linux64"
+        remoteURI="https://github.com/MartinLoeper/KAMP-Linux-Installer.git"
+        pushURI="git@github.com:MartinLoeper/KAMP-Linux-Installer.git"
+        checkoutBranch="master">
+      <description>Clone the linux 64bit installer repo</description>
+    </setupTask>
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.kamp.installer.osx"
+        remoteURI="https://github.com/MartinLoeper/KAMP-OSX-Installer.git"
+        pushURI="git@github.com:MartinLoeper/KAMP-OSX-Installer.git"
+        checkoutBranch="master">
+      <description>Clone the osx installer repo</description>
+    </setupTask>
+    <setupTask
+        xsi:type="git:GitCloneTask"
+        id="git.clone.kamp.installer.windows32"
+        remoteURI="https://github.com/MartinLoeper/KAMP-Windows-32bit-Installer.git"
+        pushURI="git@github.com:MartinLoeper/KAMP-Windows-32bit-Installer.git"
+        checkoutBranch="master">
+      <description>Clone the windows 32bit installer repo</description>
+    </setupTask>
+    <setupTask
+        xsi:type="projects:ProjectsImportTask">
+      <sourceLocator
+          rootFolder="${git.clone.kamp.installer.windows64.location}"
+          locateNestedProjects="true"/>
+      <sourceLocator
+          rootFolder="${git.clone.kamp.installer.windows32.location}"
+          locateNestedProjects="true"/>
+      <sourceLocator
+          rootFolder="${git.clone.kamp.installer.linux32.location}"
+          locateNestedProjects="true"/>
+      <sourceLocator
+          rootFolder="${git.clone.kamp.installer.linux64.location}"
+          locateNestedProjects="true"/>
+      <sourceLocator
+          rootFolder="${git.clone.kamp.installer.index.location}"
+          locateNestedProjects="true"/>
+      <sourceLocator
+          rootFolder="${git.clone.kamp.installer.windows64.location}"
+          locateNestedProjects="true"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup.workingsets:WorkingSetTask">
+      <workingSet
+          name="KAMP Installer">
+        <predicate
+            xsi:type="predicates:OrPredicate">
+          <operand
+              xsi:type="predicates:LocationPredicate"
+              pattern="${git.clone.kamp.installer.index.location}"/>
+          <operand
+              xsi:type="predicates:LocationPredicate"
+              pattern="${git.clone.kamp.installer.osx.location}"/>
+          <operand
+              xsi:type="predicates:LocationPredicate"
+              pattern="${git.clone.kamp.installer.linux64.location}"/>
+          <operand
+              xsi:type="predicates:LocationPredicate"
+              pattern="${git.clone.kamp.installer.linux32.location}"/>
+          <operand
+              xsi:type="predicates:LocationPredicate"
+              pattern="${git.clone.kamp.installer.windows64.location}"/>
+          <operand
+              xsi:type="predicates:LocationPredicate"
+              pattern="${git.clone.kamp.installer.windows32.location}"/>
+        </predicate>
+      </workingSet>
+    </setupTask>
+    <description>The customized KAMP installer</description>
+  </project>
   <description>The KAMP source projects from the official Github repository.</description>
 </setup:ProjectCatalog>
