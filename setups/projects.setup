@@ -465,22 +465,22 @@
             xsi:type="predicates:OrPredicate">
           <operand
               xsi:type="predicates:LocationPredicate"
-              pattern="${git.clone.kamp.installer.index.location}"/>
+              pattern="\Q${git.clone.kamp.installer.index.location}\E.*"/>
           <operand
               xsi:type="predicates:LocationPredicate"
-              pattern="${git.clone.kamp.installer.osx.location}"/>
+              pattern="\Q${git.clone.kamp.installer.osx.location}\E.*"/>
           <operand
               xsi:type="predicates:LocationPredicate"
-              pattern="${git.clone.kamp.installer.linux64.location}"/>
+              pattern="\Q${git.clone.kamp.installer.linux64.location}\E.*"/>
           <operand
               xsi:type="predicates:LocationPredicate"
-              pattern="${git.clone.kamp.installer.linux32.location}"/>
+              pattern="\Q${git.clone.kamp.installer.linux32.location}\E.*"/>
           <operand
               xsi:type="predicates:LocationPredicate"
-              pattern="${git.clone.kamp.installer.windows64.location}"/>
+              pattern="\Q${git.clone.kamp.installer.windows64.location}\E.*"/>
           <operand
               xsi:type="predicates:LocationPredicate"
-              pattern="${git.clone.kamp.installer.windows32.location}"/>
+              pattern="\Q${git.clone.kamp.installer.windows32.location}\E.*"/>
         </predicate>
       </workingSet>
     </setupTask>
@@ -510,7 +510,7 @@
           name="KAMP Updatesite">
         <predicate
             xsi:type="predicates:LocationPredicate"
-            pattern="${git.clone.kamp.updatesite.location}"/>
+            pattern="\Q${git.clone.kamp.updatesite.location}\E.*"/>
       </workingSet>
     </setupTask>
     <stream
