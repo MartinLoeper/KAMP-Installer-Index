@@ -558,7 +558,7 @@
     <setupTask
         xsi:type="git:GitCloneTask"
         id="git.clone.kamp.ruledsl.example"
-        location="${workspace.location/git/}"
+        location="${workspace.location/Cocome/}"
         remoteURI="https://github.com/MartinLoeper/KAMP-DSL-Showcase.git"
         pushURI="git@github.com:MartinLoeper/KAMP-DSL-Showcase.git"
         checkoutBranch="master">
@@ -567,7 +567,8 @@
     <setupTask
         xsi:type="projects:ProjectsImportTask">
       <sourceLocator
-          rootFolder="${git.clone.kamp.ruledsl.example.location}"/>
+          rootFolder="${workspace.location/Cocome/}"
+          locateNestedProjects="true"/>
     </setupTask>
     <setupTask
         xsi:type="setup.workingsets:WorkingSetTask">
