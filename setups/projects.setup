@@ -484,6 +484,9 @@
         </predicate>
       </workingSet>
     </setupTask>
+    <stream
+        name="master"
+        label="Master"/>
     <description>The customized KAMP installer</description>
   </project>
   <description>The KAMP source projects from the official Github repository.</description>
