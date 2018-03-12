@@ -8,7 +8,7 @@ If you do not want to or cannot use the customized KAMP installer, you can also 
 2. Drag the following link onto the installer's header labeled *eclipseinstaller by Oomph*: https://martinloeper.github.io/KAMP-Installer-Index/setups/org.eclipse.setup
 
 ### Development KAMP
-In order to set up the Develpment KAMP bundle automatically, please do the following steps:
+In order to set up the Develpment KAMP bundle automatically, please do the following steps manually:
 
 1. Start the KAMP Installer
 2. Download the [Configuration.SETUP file](https://raw.githubusercontent.com/MartinLoeper/KAMP-Installer-Index/master/setups/configuration.setup)
