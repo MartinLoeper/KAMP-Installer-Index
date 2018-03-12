@@ -383,26 +383,32 @@
       <workingSet
           name="KAMP4IS">
         <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*KAMP4IS.*"/>
+            xsi:type="predicates:NamePredicate"
+            pattern="edu\.kit\.ipd\.sdq\.kamp4is.*"/>
+        <predicate
+            xsi:type="predicates:NamePredicate"
+            pattern="org\.palladiosimulator\.pcm\.componentinternaldependencies.*"/>
       </workingSet>
       <workingSet
           name="KAMP4BP">
         <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*KAMP4BP.*"/>
+            xsi:type="predicates:NamePredicate"
+            pattern="de\.uhd\.ifi\.se\.pcm\.bppcm.*"/>
+        <predicate
+            xsi:type="predicates:NamePredicate"
+            pattern="edu\.kit\.ipd\.sdq\.kamp4bp.*"/>
       </workingSet>
       <workingSet
           name="KAMP4REQ">
         <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*KAMP4REQ.*"/>
+            xsi:type="predicates:NamePredicate"
+            pattern="edu\.kit\.ipd\.sdq\.kamp4req.*"/>
       </workingSet>
       <workingSet
           name="KAMP-DSL">
         <predicate
-            xsi:type="predicates:LocationPredicate"
-            pattern=".*KAMP-DSL.*"/>
+            xsi:type="predicates:NamePredicate"
+            pattern="edu\.kit\.ipd\.sdq\.kamp\.ruledsl.*"/>
       </workingSet>
     </setupTask>
     <setupTask
