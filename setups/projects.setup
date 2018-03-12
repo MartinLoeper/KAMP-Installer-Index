@@ -263,7 +263,7 @@
     <setupTask
         xsi:type="projects:ProjectsImportTask">
       <sourceLocator
-          rootFolder="${git.clone.terminology.location}"
+          rootFolder="${git.clone.kamp.location}"
           locateNestedProjects="true"/>
     </setupTask>
     <stream
