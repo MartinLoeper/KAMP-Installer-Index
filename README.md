@@ -1,6 +1,6 @@
 # KAMP-Installer-Index
 This repository is hosted via Github Pages and provides the index for the KAMP Installer by Oomph.   
-There are [special KAMP installer](https://github.com/MartinLoeper/KAMP-Windows-Installer) which are configured to used this index. 
+There are [special KAMP installer](https://github.com/MartinLoeper/KAMP-Windows-Installer) which are configured to use this index. 
 
 ### Using the official Oomph Installer
 If you do not want to or cannot use the customized KAMP installer, you can also use the [official Oomph Installer](https://wiki.eclipse.org/Eclipse_Installer). However, you have to perform the following setup steps:
