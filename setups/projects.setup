@@ -286,10 +286,6 @@
       <requirement
           name="org.palladiosimulator.solver.feature.feature.group"/>
       <requirement
-          name="org.eclipse.xtext.sdk.feature.group"/>
-      <requirement
-          name="org.eclipse.xtend.sdk.feature.group"/>
-      <requirement
           name="de.uka.ipd.sdq.dsexplore.feature.feature.group"/>
       <repository
           url="http://vitruv.tools/updatesite/nightly"/>
